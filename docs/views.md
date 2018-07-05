@@ -10,8 +10,6 @@ Form
 
 The simplest view is the `Form` view. It consist of a blank form body with a title and optional toolbar.
 
-![Form View Screenshot](assets/view-form.png)
-
 ### Options
 
 Prop | Type | Description
@@ -22,6 +20,8 @@ subtitle | string | action title, renders in form toolbar
 toolbar | node | optional toolbar
 
 ### Example
+
+![Form View Screenshot](assets/view-form.png)
 
 ```javascript
 class FormDemo extends React.Component {
@@ -138,8 +138,6 @@ For example:
 ]
 ```
 
-![Nav List View Screenshot](assets/view-nav-list.png)
-
 ### Options
 
 Prop | Type | Description
@@ -151,8 +149,9 @@ toolbar | node | optional toolbar
 navListItems | array | an array of items to display in the sidebar
 onNavSelected | func | callback function when a nav item is selected, returns the link data
 
-
 ### Example
+
+![Nav List View Screenshot](assets/view-nav-list.png)
 
 ```javascript
 class NavListDemo extends React.Component {
