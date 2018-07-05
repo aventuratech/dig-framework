@@ -63,3 +63,5 @@ Contribute
 Feel free to play around, and if you find any bugs or have ideas for features and improvements please
 let us know [here](https://github.com/forrestLyman/dig-framework/issues).
 
+If you would like to get actively involved in Dig development you should start by reviewing our [project roadmap](docs/roadmap.md).
+
