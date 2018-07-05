@@ -1,0 +1,1 @@
+export {default as withDig} from "./withDig/withDig";
