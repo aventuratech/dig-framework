@@ -26,7 +26,8 @@ which is an extended version of the core MUI theme variables.
 ### [State](docs/state.md)
 
 Dig maintains application state within the UI scope and provides utilities accessing public context including
-data, the user session, and the theme. It will additionally provide getters and setters for custom data.
+data, the user session, and the theme. It will additionally provide getters and setters for custom data. Behind the scenes
+we are using core React Context and Higher Order Components.
 
 ### [Data](docs/data.md)
 

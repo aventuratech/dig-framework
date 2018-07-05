@@ -49,7 +49,7 @@ Configure and enable your authentication method of choice in Firebase.
 
 ### Firebase Config
 
-Once your Firebase app is configured you are ready to configure your DigFramework app.
+Once your Firebase app is ready its time to configure your DigFramework app.
 
 1. Go to Firebase project settings
 2. Click `Add Firebase to your web app`
@@ -75,7 +75,7 @@ const appConfig = {
   }
 }
 
-const MyPage = ({children}) => {
+const MyPage = () => {
   return (
     <DigUi
       app={appConfig}
