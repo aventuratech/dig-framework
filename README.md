@@ -33,10 +33,28 @@ data, the user session, and the theme. It will additionally provide getters and 
 Dig is built on the Google Firestore document database. It provides a simple, standardized client to read
 and write data to the core database as well as a wide range of other data sources including Facebook, Twitter, WordPress APIs+++  (soon).
 
-Installation
+Quick Start
 ------------
 
+First create your React app. We like `create-react-app` but there are no dependencies on it:
+
+`npx create-react-app quickstart`
+
+The application is built around the concept of pages, so we always use routing:
+
+`npm i react-router-dom`
+
+Next install the DigFramework
+
 `npm install dig-framework`
+
+At this point you should be able to run your project (which will render the default create-react-app).
+
+`npm run start`
+
+Now you are ready to configure and build your app.
+
+[Get Started](docs/get-started.md)
 
 Contribute
 ----------
