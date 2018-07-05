@@ -28,6 +28,9 @@ This release will include support for the following Firebase Auth methods:
 
 It will also provide components for managing application access control. 
 
+On the back end (Firebase) we will focus on documenting best security practices and publish example schemas to integrate
+with our ACL rules.
+
 __Note that this is client based functionality, and is NOT a replacement for securing your data in your Firebase app__
 
 
