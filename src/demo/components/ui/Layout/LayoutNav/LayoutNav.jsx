@@ -4,6 +4,7 @@
 
 import {DigUiNavItem} from "lib/ui"
 
+import ViewListIcon from "@material-ui/icons/ViewList";
 import WebAssetIcon from "@material-ui/icons/WebAsset";
 import React from 'react';
 import {withDig} from "lib/core";
@@ -14,6 +15,11 @@ const LayoutNav = (props) => {
       <DigUiNavItem
         href="/demos/form"
         icon={<WebAssetIcon />}
+        text="Form View Demo"
+      />
+      <DigUiNavItem
+        href="/demos/sidebar-list"
+        icon={<ViewListIcon />}
         text="Form View Demo"
       />
     </div>
