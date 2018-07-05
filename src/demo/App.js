@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import Dashboard from "demo/components/pages/Dashboard/Dashboard";
 import Layout from "demo/components/ui/Layout/Layout";
-
+import "./App.css";
 class App extends Component {
   render() {
     return (
