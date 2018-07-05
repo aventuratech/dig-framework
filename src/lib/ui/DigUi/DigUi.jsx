@@ -251,7 +251,6 @@ class DigUi extends React.Component {
                         {this.nav()}
                         <main className={classes.content}>{children}</main>
                       </div>
-                      {children}
                     </React.Fragment>
                   )
                 } else {

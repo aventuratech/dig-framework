@@ -7,8 +7,6 @@ import PropTypes from "prop-types";
 import React from "react";
 
 // material UI
-import IconButton from "@material-ui/core/IconButton";
-import HandIcon from "@material-ui/icons/PanTool";
 import Typography from "@material-ui/core/Typography";
 import { withStyles } from "@material-ui/core/styles";
 

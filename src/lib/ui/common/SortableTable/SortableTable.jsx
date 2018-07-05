@@ -119,7 +119,6 @@ class SortableTable extends React.Component {
                       hover
                       onClick={() => this.handleClick(n)}
                       tabIndex={-1}
-                      key={n.id}
                     >
                       {columns.map((col, key) => {
                         let val = n[col.id];
