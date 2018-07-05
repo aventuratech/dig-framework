@@ -38,7 +38,7 @@ class FormDemo extends React.Component {
     return <View {...viewOptions}>
       <div className={classes.root}>
         <Typography variant="display1" align="center" gutterBottom>Blank Slate</Typography>
-        <Typography variant="body" align="center">The form view is an empty form with a Title and optional toolbar.</Typography>
+        <Typography variant="body1" align="center">The form view is an empty form with a Title and optional toolbar.</Typography>
       </div>
     </View>;
   }
