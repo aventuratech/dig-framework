@@ -1,5 +1,5 @@
 /**
- * Created by forrestlyman on 7/1/18
+ * Created by forrestlyman on 6/29/18
  */
 
 // core imports
@@ -12,15 +12,12 @@ import React from "react";
 import { withStyles } from "@material-ui/core/styles";
 
 const styles = theme => ({
-  root: {
-    width: "100%",
-  }
+  root: {}
 });
 
-class ViewForm extends React.Component {
+class SortableTableSearch extends React.Component {
   static propTypes = {
-    classes: PropTypes.object,
-    children: PropTypes.node
+    classes: PropTypes.object
   };
 
   constructor(props) {
@@ -37,9 +34,9 @@ class ViewForm extends React.Component {
   }
 
   render() {
-    const { children, classes } = this.props;
-    return <div className={classes.root}>{children}</div>;
+    const { classes } = this.props;
+    return <div className={classes.root}>Component: SortableTableSearch</div>;
   }
 }
 
-export default withStyles(styles)(ViewForm);
+export default withStyles(styles)(SortableTableSearch);

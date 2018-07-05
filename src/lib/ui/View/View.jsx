@@ -3,16 +3,12 @@
  */
 
 import CreateIcon from "@material-ui/icons/AddCircle";
-import { Form, FormBody, FormTopBar } from "components/ui/Form";
+import { Form, FormBody, FormTopBar } from "../Form"
 import IconButton from "@material-ui/core/IconButton";
 import IconViewTable from "@material-ui/icons/ViewList";
 import IconViewDetail from "@material-ui/icons/ViewQuilt";
 import PropTypes from "prop-types";
 import React from "react";
-import { RegionContext } from "components/context/Region.jsx";
-import SelectRegion from "components/ui/SelectRegion/SelectRegion";
-import SelectSite from "components/ui/SelectSite/SelectSite";
-import { SiteContext } from "components/context/Site";
 import Typography from "@material-ui/core/Typography";
 import ViewForm from "./ViewForm/ViewForm";
 import ViewNavList from "./ViewNavList/ViewNavList";
@@ -54,7 +50,7 @@ const styles = theme => ({
   },
   subtitle: {
     color: theme.palette.secondary.dark,
-    marginLeft: theme.spacing.unit * 2
+    padding: theme.spacing.unit * 2
   },
   form: {
     marginTop: -100
@@ -77,7 +73,6 @@ const View = ({
   onRefresh,
   ...other
 }) => {
-  console.log(form);
   return (
     <div className={classes.root}>
       <div className={classes.formTitle}>
@@ -86,17 +81,9 @@ const View = ({
         </Typography>
         <div className={classes.spacer} />
 
-        <SiteContext.Consumer>
-          {siteState => {
-            return <SelectSite siteContext={siteState} />;
-          }}
-        </SiteContext.Consumer>
-        <span className={classes.buttonDivider}>/</span>
-        <RegionContext.Consumer>
-          {regionState => {
-            return <SelectRegion regionContext={regionState} />;
-          }}
-        </RegionContext.Consumer>
+        <div className={classes.pageToolbar}>
+
+        </div>
       </div>
       <div className={classes.form}>
         <Form>

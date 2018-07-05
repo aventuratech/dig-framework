@@ -4,7 +4,7 @@
 
 import PropTypes from "prop-types";
 import React from "react";
-import SortableTable from "components/ui/SortableTable/SortableTable";
+import SortableTable from "../../common/SortableTable/SortableTable";
 import { withStyles } from "@material-ui/core/styles";
 
 const styles = theme => ({

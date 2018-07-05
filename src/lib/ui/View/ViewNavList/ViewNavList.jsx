@@ -2,7 +2,7 @@
  * Created by forrestlyman on 6/30/18
  */
 
-import { FormInner, FormSidebar } from "components/ui/Form";
+import { FormInner, FormSidebar } from "../../Form";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
