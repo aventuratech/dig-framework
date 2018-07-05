@@ -8,7 +8,7 @@ import React from 'react';
 
 // Material UI https://material-ui.com/
 import classNames from "classnames";
-import {DigProvider, DigContext} from "../context/Dig";
+import {DigProvider, DigContext} from "../../context/Dig";
 import DigUiConnect from "./DigUiConnect/DigUiConnect"
 import Drawer from "@material-ui/core/Drawer";
 import AccountIcon from "@material-ui/icons/AccountCircle";
