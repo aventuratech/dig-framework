@@ -1,8 +1,8 @@
-/**
- * Created by forrestlyman on 7/4/18
- */
+Dig UI
+======
 
-import {DigUi} from "dig-framework";
+```javascript
+import {DigUi} from "dig-framework/ui/DigUi";
 import grey from "@material-ui/core/colors/grey";
 import lightBlue from "@material-ui/core/colors/lightBlue";
 import React from 'react';
@@ -53,12 +53,12 @@ const themeConfig = {
 
 const appConfig = {
   firebase: {
-    apiKey: "AIzaSyAKrl5ino4g3c8woQA_b4_gCZh5uGOknQY",
-    authDomain: "digframework.firebaseapp.com",
-    databaseURL: "https://digframework.firebaseio.com",
-    projectId: "digframework",
-    storageBucket: "digframework.appspot.com",
-    messagingSenderId: "665483813593"
+    apiKey: "###",
+    authDomain: "yourapp.firebaseapp.com",
+    databaseURL: "https://yourapp.firebaseio.com",
+    projectId: "yourapp",
+    storageBucket: "yourapp.appspot.com",
+    messagingSenderId: "###"
   },
   auth: 'facebook',
   client: {
@@ -85,3 +85,33 @@ Layout.propTypes = {
 }
 
 export default Layout;
+```
+
+### Navigation
+
+By default the UI displays a home icon which routes to the root and an account icon which displays account preferences.
+
+You can customize this by passing a Nav component to the `DigUi` nav property. The Nav component should render a collection of
+`DigUiNavItem`
+
+```javascript
+import {DigUiNavItem} from "dig-framework/ui/DigUi"
+
+import PostIcon from "@material-ui/icons/CloudDownload";
+import React from 'react';
+import withDig from "dig-framework/core/withDig/withDig";
+
+const LayoutNav = (props) => {
+  return (
+    <div>
+      <DigUiNavItem
+        href="/posts"
+        icon={<PostIcon />}
+        text="Manage Posts"
+      />
+    </div>
+  )
+}
+
+export default withDig(LayoutNav);
+```
