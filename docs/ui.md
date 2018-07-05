@@ -115,3 +115,9 @@ const LayoutNav = (props) => {
 
 export default withDig(LayoutNav);
 ```
+
+### Views
+
+Form views are the building blocks of your DigFramework application. 
+
+[Learn more about available views](views.md)
