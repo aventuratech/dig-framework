@@ -5,11 +5,15 @@
 // core imports
 import PropTypes from "prop-types";
 import React from "react";
-import Typography from "@material-ui/core/Typography";
-import {View} from "lib/ui";
 
-// material ui style
+// material UI
+import IconButton from "@material-ui/core/IconButton";
+import HandIcon from "@material-ui/icons/PanTool";
+import Typography from "@material-ui/core/Typography";
 import { withStyles } from "@material-ui/core/styles";
+
+import {View} from "lib/ui";
+import {withDig} from "lib/core";
 
 const styles = theme => ({
   root: {
@@ -27,12 +31,27 @@ class FormDemo extends React.Component {
     this.state = {};
   }
 
+  handleClick = () => {
+    console.log('Hi ' + this.props.digUser.name + '!');
+  }
+
+  renderToolbar = () => {
+    return (
+      <div>
+        <IconButton onClick={this.handleClick}>
+          <HandIcon/>
+        </IconButton>
+      </div>
+    )
+  }
+
   render() {
     const {classes} = this.props;
     const viewOptions = {
       form: "Form",
       title: "Post Manager",
-      subtitle: "View all posts"
+      subtitle: "View all posts",
+      toolbar: this.renderToolbar()
     };
 
     return <View {...viewOptions}>
@@ -44,4 +63,4 @@ class FormDemo extends React.Component {
   }
 }
 
-export default withStyles(styles)(FormDemo);
+export default withDig(withStyles(styles)(FormDemo));
