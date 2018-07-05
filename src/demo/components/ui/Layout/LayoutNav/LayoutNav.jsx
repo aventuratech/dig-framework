@@ -4,6 +4,7 @@
 
 import {DigUiNavItem} from "lib/ui"
 
+import ViewTableIcon from "@material-ui/icons/ViewModule";
 import ViewListIcon from "@material-ui/icons/ViewList";
 import WebAssetIcon from "@material-ui/icons/WebAsset";
 import React from 'react';
@@ -20,6 +21,11 @@ const LayoutNav = (props) => {
       <DigUiNavItem
         href="/demos/sidebar-list"
         icon={<ViewListIcon />}
+        text="Form View Demo"
+      />
+      <DigUiNavItem
+        href="/demos/table"
+        icon={<ViewTableIcon />}
         text="Form View Demo"
       />
     </div>

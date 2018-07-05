@@ -112,9 +112,10 @@ class SortableTable extends React.Component {
               {data
                 .sort(getSorting(order, orderBy))
                 .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-                .map(n => {
+                .map((n,k) => {
                   return (
                     <TableRow
+                      key={k}
                       hover
                       onClick={() => this.handleClick(n)}
                       tabIndex={-1}

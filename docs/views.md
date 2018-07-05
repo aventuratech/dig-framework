@@ -225,3 +225,121 @@ class NavListDemo extends React.Component {
 ```
 
 [View Complete Source](../src/demo/components/pages/SidebarListDemo/SidebarListDemo.jsx)
+
+
+Table View
+---------
+
+The `Table` view renders the MaterialUI DataGrid, and supports filtering (searching) as well as sorting and pagination.
+
+The table requires an array of configuration data that defines the columns. These items include the following properties:
+
+Prop | Type | Description
+-----|------|------------
+id | string | object key for the data row
+numeric | bool | whether the field is numeric
+label | string | the column header
+
+For example:
+
+```javascript
+[
+    {
+        id: "city",
+        numeric: false,
+        label: "City"
+    }
+]
+```
+
+### Options
+
+Prop | Type | Description
+-----|------|------------
+classes | object | override core classes
+title | string | page title
+subtitle | string | action title, renders in form toolbar
+toolbar | node | optional toolbar
+columns | array | column configuration
+data | array | array of table data to display
+onClick | func | callback function when a row is clicked, passes the row data
+
+
+### Example
+
+![Table View Screenshot](assets/view-table.png)
+
+```javascript
+class TableDemo extends React.Component {
+  static propTypes = {
+    classes: PropTypes.object
+  };
+
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
+  handleClick = (row) => {
+    console.log('You selected row:', row);
+  }
+
+  render() {
+    const {classes} = this.props;
+
+    const columns = [
+      {
+        id: "city",
+        numeric: false,
+        label: "City"
+      },
+      {
+        id: "state",
+        numeric: false,
+        label: "State"
+      },
+      {
+        id: "population",
+        numeric: true,
+        label: "Population"
+      },
+    ];
+
+    const data = [
+      {
+        city: "New York",
+        state: "New York",
+        population: 8175000
+      },
+      {
+        city: "Los Angeles",
+        state: "California",
+        population: 3792000
+      },
+      {
+        city: "Chicago",
+        state: "Illinois",
+        population: 2695000
+      }
+    ]
+
+    const viewOptions = {
+      form: "Table",
+      title: "Table View Demo",
+      subtitle: "View cities by population",
+      columns: columns,
+      data: data,
+      onClick: this.handleClick
+    };
+
+    return <View {...viewOptions}>
+      <div className={classes.root}>
+        <Typography variant="display1" align="center" gutterBottom>Detail View</Typography>
+        <Typography variant="body1" align="center">...</Typography>
+      </div>
+    </View>;
+  }
+}
+```
+
+[View Complete Source](../src/demo/components/pages/TableDemo/TableDemo.jsx)
