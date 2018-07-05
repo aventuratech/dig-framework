@@ -57,7 +57,7 @@ class ViewNavList extends React.Component {
     super(props);
     this.state = {
       detailView: false,
-      data: []
+      data: this.props.data
     };
   }
 
