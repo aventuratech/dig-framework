@@ -1,6 +1,6 @@
 {
   "name": "dig-framework",
-  "version": "0.1.9",
+  "version": "0.2.0",
   "homepage": "https://github.com/forrestLyman/dig-framework",
   "bugs": "https://github.com/forrestLyman/dig-framework/issues",
   "main": "dist/index.js",
